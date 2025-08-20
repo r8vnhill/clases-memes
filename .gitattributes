@@ -1,0 +1,75 @@
+# -----------------------------------------------------------
+# Line endings / text normalization
+# Use LF across platforms to avoid CRLF churn in diffs.
+# -----------------------------------------------------------
+*               text=auto eol=lf
+
+# Make common text files explicit
+*.sbt           text eol=lf
+*.scala         text eol=lf
+*.sc            text eol=lf
+*.java          text eol=lf
+*.kt            text eol=lf
+*.md            text eol=lf
+*.txt           text eol=lf
+*.yaml          text eol=lf
+*.yml           text eol=lf
+*.json          text eol=lf
+*.xml           text eol=lf
+*.properties    text eol=lf
+*.conf          text eol=lf
+*.gitignore     text eol=lf
+*.gitattributes text eol=lf
+*.editorconfig  text eol=lf
+*.sh            text eol=lf
+*.ps1           text eol=lf
+
+# -----------------------------------------------------------
+# Binary files (no diff/merge attempts)
+# -----------------------------------------------------------
+*.jar           binary
+*.class         binary
+*.zip           binary
+*.gz            binary
+*.tgz           binary
+*.7z            binary
+
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.svg           text  eol=lf
+*.pdf           binary
+
+*.docx          binary
+*.pptx          binary
+*.xlsx          binary
+
+# -----------------------------------------------------------
+# GitHub Linguist hints (keeps language stats clean)
+# -----------------------------------------------------------
+target/**               linguist-generated=true
+project/target/**       linguist-generated=true
+project/project/**      linguist-generated=true
+.bloop/**               linguist-generated=true
+.bsp/**                 linguist-generated=true
+.metals/**              linguist-generated=true
+dist/**                 linguist-generated=true
+
+# Managed/generated sources (if ever committed)
+lib_managed/**          linguist-vendored=true
+src_managed/**          linguist-generated=true
+
+# -----------------------------------------------------------
+# Exclude noisy folders from `git archive` (release tarballs)
+# -----------------------------------------------------------
+target/**               export-ignore
+project/target/**       export-ignore
+project/project/**      export-ignore
+.bloop/**               export-ignore
+.bsp/**                 export-ignore
+.metals/**              export-ignore
+dist/**                 export-ignore
+.idea/**                export-ignore
+.vscode/**              export-ignore

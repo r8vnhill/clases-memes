@@ -1,0 +1,70 @@
+# -----------------------------
+# OS cruft (better in global ignore, but harmless here)
+# -----------------------------
+.DS_Store
+
+# -----------------------------
+# sbt / Scala build outputs
+# -----------------------------
+/**/target/*
+/project/project/
+/dist/
+/lib_managed/
+/src_managed/
+
+# sbt local overrides / caches you don’t want in VCS
+/.history
+/.cache
+/.lib/
+/local.sbt
+
+# Optional: scripted test work dirs
+/.sbt-scripted/
+
+# -----------------------------
+# Build tools: Bloop / BSP / Metals
+# -----------------------------
+/.bsp/
+/.bloop/
+/.metals/
+/metals.sbt
+
+# -----------------------------
+# IDEs & editors
+# (keep minimal; teams sometimes commit parts of .idea intentionally)
+# -----------------------------
+# IntelliJ / JetBrains
+/.idea/
+out/
+# If you prefer to commit run configs, comment ^ and ignore these instead:
+#.idea/**/workspace.xml
+#.idea/**/tasks.xml
+#.idea/**/shelf
+#.idea/**/dictionaries
+#.idea/**/httpRequests
+#.idea/**/contentModel.xml
+#.idea/**/caches/
+#.idea/**/aws.xml
+#.idea/**/dataSources*
+
+# VS Code
+/.vscode/
+
+# -----------------------------
+# Misc. build systems / plugins
+# -----------------------------
+/project/boot/
+/project/plugins/project/
+/project/local-plugins.sbt
+
+# -----------------------------
+# Logs / crash dumps / classes
+# -----------------------------
+*.log
+*.class
+hs_err_pid*
+
+# -----------------------------
+# Android/Gradle/CMake (if you don’t use them, keep; otherwise trim)
+# -----------------------------
+/cmake-build-*/
