@@ -113,6 +113,14 @@ lazy val programmingToAbstractions = project
     moduleName := "programming-to-abstractions"
   )
 
+// Subproyecto correspondiente a la clase 05: Inheritance and Abstract Classes
+lazy val inheritance = project
+  .in(file("05-inheritance"))
+  .settings(
+    name := "05-inheritance",
+    moduleName := "inheritance"
+  )
+
 // -----------------------------------------------------------------------------
 // Proyecto raíz
 // -----------------------------------------------------------------------------
