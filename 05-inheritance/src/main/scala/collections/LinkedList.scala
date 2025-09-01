@@ -1,25 +1,24 @@
 package cl.uchile.dcc
 package collections
 
-class LinkedList extends BaseMutableList:
+class LinkedList extends AbstractMutableList:
   var size: Int = 0
   var first: Option[Node] = None
   var last: Option[Node] = None
 
   override def add(index: Int, value: Any): Unit =
-    if index < 0 || index > size then
-      println("Index out of bounds")
-      return
-    val newNode = new Node(value)
-    val after = getNode(index)
-    if after.isDefined then
-      newNode.next = after
-      newNode.prev = after.get.prev
-      if after.get.prev.isEmpty then first = Some(newNode)
-      else after.get.prev.get.next = Some(newNode)
-      after.get.prev = Some(newNode)
-      size += 1
-    else ???
+    if index < 0 || index > size then println("Index out of bounds")
+    else
+      val newNode = new Node(value)
+      val after = getNode(index)
+      if after.isDefined then
+        newNode.next = after
+        newNode.prev = after.get.prev
+        if after.get.prev.isEmpty then first = Some(newNode)
+        else after.get.prev.get.next = Some(newNode)
+        after.get.prev = Some(newNode)
+        size += 1
+      else ???
 
   override def get(index: Int): Option[Any] =
     val node = getNode(index)

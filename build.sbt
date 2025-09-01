@@ -121,6 +121,22 @@ lazy val inheritance = project
     moduleName := "inheritance"
   )
 
+// Subproyecto correspondiente a la clase 06: Ejercicio - Reproductor multimedia
+lazy val mediaPlayerExercise = project
+  .in(file("06-media-player-exercise"))
+  .settings(
+    name := "media-player-exercise",
+    moduleName := "media-player-exercise"
+  )
+
+// Subproyecto correspondiente a la clase 06: Sobrescritura, Sobrecarga y Búsqueda de Métodos
+lazy val overridingOverloading = project
+  .in(file("07-overriding-overloading"))
+  .settings(
+    name := "07-overriding-overloading",
+    moduleName := "overriding-overloading"
+  )
+
 // -----------------------------------------------------------------------------
 // Proyecto raíz
 // -----------------------------------------------------------------------------
@@ -129,7 +145,7 @@ lazy val inheritance = project
 // pero agrupa a todos los subproyectos para compilar/testear en conjunto.
 lazy val root = project
   .in(file("."))
-  .aggregate(staticTyping, introOOP, testing, programmingToAbstractions) // Agrega los subproyectos
+  .aggregate(staticTyping, introOOP, testing, programmingToAbstractions, overridingOverloading) // Agrega los subproyectos
   .settings(
     name := "clases-memes",
     publish / skip := true // Evita que sbt intente publicar este módulo
