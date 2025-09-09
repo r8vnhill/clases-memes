@@ -38,8 +38,8 @@ ThisBuild / scalaVersion := scala3
 // Aquí centralizamos las versiones de librerías externas. De esta forma,
 // si queremos actualizar una dependencia, basta con cambiar el valor aquí.
 lazy val V = new {
-  val munit = "1.1.1"   // versión de MUnit (framework de testing)
-  val junit = "5.13.4"  // versión estable de JUnit 5
+  val munit = "1.1.1" // versión de MUnit (framework de testing)
+  val junit = "5.13.4" // versión estable de JUnit 5
 }
 
 // -----------------------------------------------------------------------------
@@ -52,7 +52,7 @@ lazy val commonSettings = Seq(
   // Opciones para el compilador Scala. Sirven para mostrar advertencias útiles.
   scalacOptions ++= Seq(
     "-deprecation", // Advertir si usamos APIs obsoletas
-    "-feature",     // Advertir si usamos características avanzadas
+    "-feature", // Advertir si usamos características avanzadas
     "-Wunused:imports,locals,privates,params", // Detectar código sin usar
     "-Wvalue-discard" // Advertir si se descartan valores sin usarlos
   ),
@@ -129,12 +129,28 @@ lazy val mediaPlayerExercise = project
     moduleName := "media-player-exercise"
   )
 
-// Subproyecto correspondiente a la clase 06: Sobrescritura, Sobrecarga y Búsqueda de Métodos
+// Subproyecto correspondiente a la clase 07: Sobrescritura, Sobrecarga y Búsqueda de Métodos
 lazy val overridingOverloading = project
   .in(file("07-overriding-overloading"))
   .settings(
     name := "07-overriding-overloading",
     moduleName := "overriding-overloading"
+  )
+
+// Subproyecto correspondiente a la clase 08: Encapsulamiento y principio de Liskov
+lazy val encapsulationAndLiskov = project
+  .in(file("08-encapsulation-and-liskov"))
+  .settings(
+    name := "08-encapsulation-and-liskov",
+    moduleName := "encapsulation-and-liskov"
+  )
+
+// Subproyecto correspondiente a la clase 09: Double Dispatch
+lazy val doubleDispatch = project
+  .in(file("09-double-dispatch"))
+  .settings(
+    name := "09-double-dispatch",
+    moduleName := "double-dispatch"
   )
 
 // -----------------------------------------------------------------------------
@@ -145,7 +161,14 @@ lazy val overridingOverloading = project
 // pero agrupa a todos los subproyectos para compilar/testear en conjunto.
 lazy val root = project
   .in(file("."))
-  .aggregate(staticTyping, introOOP, testing, programmingToAbstractions, overridingOverloading) // Agrega los subproyectos
+  .aggregate(staticTyping,
+    introOOP,
+    testing,
+    programmingToAbstractions,
+    overridingOverloading,
+    mediaPlayerExercise,
+    encapsulationAndLiskov,
+    doubleDispatch) // Agrega los subproyectos
   .settings(
     name := "clases-memes",
     publish / skip := true // Evita que sbt intente publicar este módulo
