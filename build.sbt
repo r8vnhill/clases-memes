@@ -49,26 +49,26 @@ lazy val V = new {
 // "commonSettings" agrupa ajustes que se aplicarán automáticamente
 // a todos los subproyectos definidos en este build.
 lazy val commonSettings = Seq(
-  // Opciones para el compilador Scala. Sirven para mostrar advertencias útiles.
-  scalacOptions ++= Seq(
-    "-deprecation", // Advertir si usamos APIs obsoletas
-    "-feature", // Advertir si usamos características avanzadas
-    "-Wunused:imports,locals,privates,params", // Detectar código sin usar
-    "-Wvalue-discard" // Advertir si se descartan valores sin usarlos
-  ),
+    // Opciones para el compilador Scala. Sirven para mostrar advertencias útiles.
+    scalacOptions ++= Seq(
+        "-deprecation", // Advertir si usamos APIs obsoletas
+        "-feature", // Advertir si usamos características avanzadas
+        "-Wunused:imports,locals,privates,params", // Detectar código sin usar
+        "-Wvalue-discard" // Advertir si se descartan valores sin usarlos
+    ),
 
-  // Ejecutar los tests en un proceso separado para aislarlos del compilador
-  Test / fork := true,
+    // Ejecutar los tests en un proceso separado para aislarlos del compilador
+    Test / fork := true,
 
-  // Dependencia de MUnit, usada para escribir tests en Scala de forma simple
-  libraryDependencies += "org.scalameta" %% "munit" % V.munit % Test,
+    // Dependencia de MUnit, usada para escribir tests en Scala de forma simple
+    libraryDependencies += "org.scalameta" %% "munit" % V.munit % Test,
 
-  // Indica explícitamente a sbt que usaremos MUnit como framework de tests
-  testFrameworks += new TestFramework("munit.Framework"),
+    // Indica explícitamente a sbt que usaremos MUnit como framework de tests
+    testFrameworks += new TestFramework("munit.Framework"),
 
-  // Configuración para el IDE (ej. IntelliJ) que ayuda a reconocer el proyecto
-  // Necesita el plugin sbt-ide-settings para funcionar correctamente (ver project/plugins.sbt)
-  idePackagePrefix := Some(orgId)
+    // Configuración para el IDE (ej. IntelliJ) que ayuda a reconocer el proyecto
+    // Necesita el plugin sbt-ide-settings para funcionar correctamente (ver project/plugins.sbt)
+    idePackagePrefix := Some(orgId)
 )
 
 // Aplica "commonSettings" automáticamente a todos los proyectos de este build
@@ -83,74 +83,98 @@ inThisBuild(commonSettings)
 lazy val staticTyping = project
   .in(file("01-static-typing")) // Carpeta donde vive este módulo
   .settings(
-    name := "01-static-typing", // Nombre del proyecto
-    moduleName := "static-typing" // Nombre del artefacto compilado
+      name := "01-static-typing", // Nombre del proyecto
+      moduleName := "static-typing" // Nombre del artefacto compilado
   )
 
 // Subproyecto correspondiente a la clase 02: introducción a la OOP
 lazy val introOOP = project
   .in(file("02-intro-oop"))
   .settings(
-    name := "02-intro-oop",
-    moduleName := "intro-oop"
+      name := "02-intro-oop",
+      moduleName := "intro-oop"
   )
 
 // Subproyecto correspondiente a la clase 03: testing
 lazy val testing = project
   .in(file("03-testing"))
   .settings(
-    name := "03-testing",
-    moduleName := "testing",
-    // Dependencia adicional: JUnit 5 (útil si queremos ejemplos de tests mixtos)
-    libraryDependencies += "org.junit.jupiter" % "junit-jupiter-api" % V.junit % Test
+      name := "03-testing",
+      moduleName := "testing",
+      // Dependencia adicional: JUnit 5 (útil si queremos ejemplos de tests mixtos)
+      libraryDependencies += "org.junit.jupiter" % "junit-jupiter-api" % V.junit % Test
   )
 
 // Subproyecto correspondiente a la clase 04: Programming to Abstractions
 lazy val programmingToAbstractions = project
   .in(file("04-programming-to-abstractions"))
   .settings(
-    name := "04-programming-to-abstractions",
-    moduleName := "programming-to-abstractions"
+      name := "04-programming-to-abstractions",
+      moduleName := "programming-to-abstractions"
   )
 
 // Subproyecto correspondiente a la clase 05: Inheritance and Abstract Classes
 lazy val inheritance = project
   .in(file("05-inheritance"))
   .settings(
-    name := "05-inheritance",
-    moduleName := "inheritance"
+      name := "05-inheritance",
+      moduleName := "inheritance"
   )
 
 // Subproyecto correspondiente a la clase 06: Ejercicio - Reproductor multimedia
 lazy val mediaPlayerExercise = project
   .in(file("06-media-player-exercise"))
   .settings(
-    name := "media-player-exercise",
-    moduleName := "media-player-exercise"
+      name := "media-player-exercise",
+      moduleName := "media-player-exercise"
   )
 
 // Subproyecto correspondiente a la clase 07: Sobrescritura, Sobrecarga y Búsqueda de Métodos
 lazy val overridingOverloading = project
   .in(file("07-overriding-overloading"))
   .settings(
-    name := "07-overriding-overloading",
-    moduleName := "overriding-overloading"
+      name := "07-overriding-overloading",
+      moduleName := "overriding-overloading"
   )
 
 // Subproyecto correspondiente a la clase 08: Encapsulamiento y principio de Liskov
 lazy val encapsulationAndLiskov = project
   .in(file("08-encapsulation-and-liskov"))
   .settings(
-    name := "08-encapsulation-and-liskov",
-    moduleName := "encapsulation-and-liskov"
+      name := "08-encapsulation-and-liskov",
+      moduleName := "encapsulation-and-liskov"
   )
 
 // Subproyecto correspondiente a la clase 09: Double Dispatch
 lazy val doubleDispatch = project
   .in(file("09-double-dispatch"))
   .settings(
-    name := "09-double-dispatch",
-    moduleName := "double-dispatch"
+      name := "09-double-dispatch",
+      moduleName := "double-dispatch"
+  )
+
+// Subproyecto correspondiente a la clase 10: Excepciones
+lazy val exceptions = project
+  .in(file("10-exceptions"))
+  .settings(
+      name := "10-exceptions",
+      moduleName := "exceptions"
+  )
+
+// Subproyecto correspondiente a la clase 11: Polimorfismo revisitado
+lazy val polymorphism = project
+  .in(file("11-polymorphism"))
+  .settings(
+      name := "11-polymorphism",
+      moduleName := "polymorphism"
+  )
+
+// Subproyecto correspondiente a la clase 13: Patrones de Diseño I: Adapter, Proxy, Observer y State
+lazy val designPatterns1 = project
+  .in(file("13-design-patterns-1"))
+  .settings(
+      name := "13-design-patterns-1",
+      moduleName := "design-patterns-1"
   )
 
 // -----------------------------------------------------------------------------
@@ -161,17 +185,22 @@ lazy val doubleDispatch = project
 // pero agrupa a todos los subproyectos para compilar/testear en conjunto.
 lazy val root = project
   .in(file("."))
-  .aggregate(staticTyping,
-    introOOP,
-    testing,
-    programmingToAbstractions,
-    overridingOverloading,
-    mediaPlayerExercise,
-    encapsulationAndLiskov,
-    doubleDispatch) // Agrega los subproyectos
+  .aggregate(
+      staticTyping,
+      introOOP,
+      testing,
+      programmingToAbstractions,
+      overridingOverloading,
+      mediaPlayerExercise,
+      encapsulationAndLiskov,
+      doubleDispatch,
+      exceptions,
+      polymorphism,
+      designPatterns1
+  ) // Agrega los subproyectos
   .settings(
-    name := "clases-memes",
-    publish / skip := true // Evita que sbt intente publicar este módulo
+      name := "clases-memes",
+      publish / skip := true // Evita que sbt intente publicar este módulo
   )
 
 // -----------------------------------------------------------------------------

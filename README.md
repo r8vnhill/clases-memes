@@ -22,7 +22,7 @@ git clone https://github.com/r8vnhill/clases-memes.git
 ```
 
 Cámbiate a la rama correspondiente al semestre.
-Por ejemplo, para el semestre Primavera 2025 (2025-2):
+Por ejemplo, para el semestre de Primavera 2025 (2025-2):
 
 ```bash
 git checkout 2025/2
