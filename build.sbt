@@ -19,7 +19,7 @@
 // -----------------------------------------------------------------------------
 
 // Versión de Scala que usarán los subproyectos del curso
-val scala3 = "3.7.2"
+val scala3 = "3.7.3"
 
 // Nombre de la organización (se usará como prefijo de paquetes y metadatos)
 val orgId = "cl.uchile.dcc"
@@ -175,6 +175,15 @@ lazy val designPatterns1 = project
   .settings(
       name := "13-design-patterns-1",
       moduleName := "design-patterns-1"
+  )
+
+// Subproyecto correspondiente a la clase 14: Ejercicio Tamagotchi
+lazy val tamagotchiExercise = project
+  .in(file("14-tamagotchi-exercise"))
+  .dependsOn(designPatterns1)
+  .settings(
+      name := "14-tamagotchi-exercise",
+      moduleName := "tamagotchi-exercise"
   )
 
 // -----------------------------------------------------------------------------
