@@ -186,6 +186,14 @@ lazy val tamagotchiExercise = project
       moduleName := "tamagotchi-exercise"
   )
 
+// Subproyecto correspondiente a la clase 15: Patrones de Diseño II - Template, Composite, Null, Factory, Singleton y Flyweight
+lazy val designPatterns2 = project
+  .in(file("15-design-patterns-2"))
+  .settings(
+      name := "15-design-patterns-2",
+      moduleName := "design-patterns-2"
+  )
+
 // -----------------------------------------------------------------------------
 // Proyecto raíz
 // -----------------------------------------------------------------------------
@@ -205,7 +213,8 @@ lazy val root = project
       doubleDispatch,
       exceptions,
       polymorphism,
-      designPatterns1
+      designPatterns1,
+      tamagotchiExercise
   ) // Agrega los subproyectos
   .settings(
       name := "clases-memes",
