@@ -207,6 +207,7 @@ lazy val root = project
       introOOP,
       testing,
       programmingToAbstractions,
+      inheritance,
       overridingOverloading,
       mediaPlayerExercise,
       encapsulationAndLiskov,
@@ -214,7 +215,8 @@ lazy val root = project
       exceptions,
       polymorphism,
       designPatterns1,
-      tamagotchiExercise
+      tamagotchiExercise,
+      designPatterns2
   ) // Agrega los subproyectos
   .settings(
       name := "clases-memes",
