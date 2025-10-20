@@ -7,7 +7,7 @@ import scala.io.Source
 @main def textEditor(): Unit =
   val path = "15-design-patterns-2/src/main/resources/quijote.txt"
 
-  //noinspection SourceNotClosed
+  // noinspection SourceNotClosed
   // Nota: asumimos que el archivo siempre puede abrirse correctamente.
   // En un programa real deberíamos cerrar el archivo con try-finally o Using.
   val text = Source.fromFile(path).mkString
@@ -19,9 +19,7 @@ import scala.io.Source
 
   while position < text.length do
     val c = text.charAt(position)
-    val character = new Character(
-      flyweight.getOrCreate(c),
-      position)
+    val character = new Character(flyweight.getOrCreate(c), position)
     document += character
     position += 1
 
