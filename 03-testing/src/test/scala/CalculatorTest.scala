@@ -1,16 +1,18 @@
 package cl.uchile.dcc
 
 /**
- * Unit tests for the [[Calculator]] class, written with the MUnit testing framework.
+ * Unit tests for the [[Calculator]] class, written with the MUnit testing
+ * framework.
  *
  * ⚠️ Note for students:
  *
- * In professional projects, test classes are usually **not documented** because:
+ * In professional projects, test classes are usually **not documented**
+ * because:
  *   - The purpose of a test is normally clear from its class and method names.
  *   - Good tests should be self-explanatory.
  *
- * Here we add documentation for **teaching purposes**, to explain how tests are structured and why
- * they are written this way.
+ * Here we add documentation for **teaching purposes**, to explain how tests are
+ * structured and why they are written this way.
  */
 class CalculatorTest extends munit.FunSuite:
 
@@ -39,7 +41,8 @@ class CalculatorTest extends munit.FunSuite:
    *   - Inside, we use `assertEquals(expected, actual, clue)`:
    *     - `expected`: the result we *want* (5).
    *     - `actual`: the result from running the code (`calculator.add(2, 3)`).
-   *     - `clue`: an optional message shown if the test fails, useful for debugging.
+   *     - `clue`: an optional message shown if the test fails, useful for
+   *       debugging.
    */
   test("Test addition of two numbers") {
     assertEquals(5, calculator.get.add(2, 3), "2 + 3")

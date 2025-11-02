@@ -4,7 +4,10 @@ package recursion
 import scala.util.control.NoStackTrace
 
 // Modelo simple de árbol binario
-class Node(val value: Int, val left: Option[Node] = None, val right: Option[Node] = None)
+class Node(val value: Int,
+           val left: Option[Node] = None,
+           val right: Option[Node] = None
+)
 
 object SearchWithoutThrowable:
   def contains(root: Option[Node], target: Int): Boolean =

@@ -41,6 +41,8 @@ Universidad de Chile – Departamento de Ciencias de la Computación
 **Estructura:**
 - Proyecto multi-módulo: cada carpeta numerada es un subproyecto SBT.  
   El proyecto raíz agrega todos los subproyectos para compilar y testear en conjunto.
+- **Este repositorio contiene solo código de ejemplo y ejercicios**, no incluye las presentaciones ni cátedras del curso.
+- **Lecciones faltantes** (12, 16, etc.) están en otro repositorio: [dcc-cc3002/clases-2025-2](https://github.com/dcc-cc3002/clases-2025-2/tree/main)
 
 > [!TIP]
 > Cada módulo es **autónomo y puede contener ejecutables**, permitiendo enfocarse en conceptos aislados (OOP, patrones, pruebas, etc.).  
@@ -146,7 +148,11 @@ El proyecto raíz (`root`) agrega los siguientes módulos:
 13-design-patterns-1
 14-tamagotchi-exercise
 15-design-patterns-2
+17-visitor
 ```
+
+> [!NOTE]
+> Algunos números de lección faltan en este repositorio (ej. 12, 16) porque esas clases están en [otro repositorio](https://github.com/dcc-cc3002/clases-2025-2/tree/main).
 
 **Convenciones:**
 - Paquete base: `cl.uchile.dcc`
@@ -164,6 +170,8 @@ El proyecto raíz (`root`) agrega los siguientes módulos:
 **Documentación:**
 - La mayoría del código incluye comentarios breves, no documentación formal.
 - No se usa formato Scaladoc de producción.
+
+- [Programa del curso (Primavera 2021) — transcripción](docs/CC3002-programa-primavera-2021-transcripcion.md): documento histórico transcrito; puede no estar completamente actualizado.
 
 ---
 

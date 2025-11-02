@@ -6,8 +6,7 @@ trait RectangleView:
   def height: Int
   def area: Int
 
-class Rectangle(private var _width: Int,
-                private var _height: Int)
+class Rectangle(private var _width: Int, private var _height: Int)
     extends RectangleView:
   override def width: Int =
     _width
@@ -20,8 +19,7 @@ class Rectangle(private var _width: Int,
   def height_=(height: Int): Unit =
     _height = height
 
-class Square(_side: Int)
-    extends RectangleView:
+class Square(_side: Int) extends RectangleView:
   // En lugar de heredar, delegamos a Rectangle
   private val rect = Rectangle(_side, _side)
   def side: Int = rect.width

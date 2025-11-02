@@ -3,7 +3,10 @@ package tamagotchi
 
 import state.exceptions.InvalidTransitionException
 import tamagotchi.events.{InvalidTransition, ValidTransition}
-import tamagotchi.publishers.{InvalidTransitionPublisher, ValidTransitionPublisher}
+import tamagotchi.publishers.{
+  InvalidTransitionPublisher,
+  ValidTransitionPublisher
+}
 import tamagotchi.states.{Happy, TamagotchiState}
 
 class Tamagotchi:

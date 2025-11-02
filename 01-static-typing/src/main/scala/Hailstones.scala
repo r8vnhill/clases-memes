@@ -14,8 +14,8 @@ package cl.uchile.dcc
 /**
  * Iterative implementation of the hailstone sequence.
  *
- * Uses a `while` loop to repeatedly update the number until it reaches 1. At each step, the current
- * value is printed.
+ * Uses a `while` loop to repeatedly update the number until it reaches 1. At
+ * each step, the current value is printed.
  *
  * @param n
  *   the starting number of the sequence
@@ -36,7 +36,8 @@ def itHailstone(n: Int): Int =
 /**
  * Recursive implementation of the hailstone sequence.
  *
- * This version calls itself instead of using a loop. At each step, the current number is printed.
+ * This version calls itself instead of using a loop. At each step, the current
+ * number is printed.
  *
  * @param n
  *   the current value in the sequence
@@ -58,8 +59,8 @@ def recHailstone(n: Int): Int =
 /**
  * Main program entry point.
  *
- * Runs the hailstone sequence starting from 3, once with the iterative version and once with the
- * recursive version.
+ * Runs the hailstone sequence starting from 3, once with the iterative version
+ * and once with the recursive version.
  */
 @main def hailstones(): Unit =
   itHailstone(3) // Run iterative hailstone

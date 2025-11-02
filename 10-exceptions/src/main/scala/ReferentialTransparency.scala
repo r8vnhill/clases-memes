@@ -5,6 +5,4 @@ def failingFn(i: Int): Int =
     val x = 42 + 5
     x + (throw Exception("fail!"))
       .asInstanceOf[Int]
-  catch
-    case e: Exception => 43
-
+  catch case e: Exception => 43

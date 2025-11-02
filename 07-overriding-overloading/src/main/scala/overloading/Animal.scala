@@ -7,9 +7,9 @@ class Animal(val name: String):
     println(s"Good morning, ${a.name}")
 
   /**
-   * IMPORTANTE: Usamos getClass para acceder al nombre de la clase y mostrarlo getClass NO DEBE
-   * USARSE para comparar objetos, úsalo **solamente** para propósitos de "display", nunca para
-   * inspeccionar
+   * IMPORTANTE: Usamos getClass para acceder al nombre de la clase y mostrarlo
+   * getClass NO DEBE USARSE para comparar objetos, úsalo **solamente** para
+   * propósitos de "display", nunca para inspeccionar
    *
    * <h1>Ejemplos de mal uso</h1>
    * {{{
@@ -27,7 +27,7 @@ class Cat(name: String) extends Animal(name):
     println("Hello fellow cat")
 
   override def equals(obj: Any): Boolean =
-    if getClass == obj.getClass then  // <-- NO HACER FUERA DE EQUALS
+    if getClass == obj.getClass then // <-- NO HACER FUERA DE EQUALS
       val other = obj.asInstanceOf[Cat]
       name == other.name
     else false

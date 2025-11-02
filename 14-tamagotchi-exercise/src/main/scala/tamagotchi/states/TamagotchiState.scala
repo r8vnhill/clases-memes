@@ -15,4 +15,6 @@ class TamagotchiState protected ():
     error("sleep", context)
 
   private def error(action: String, context: Tamagotchi): Nothing =
-    throw new InvalidTransitionException(action, context.state.getClass.getSimpleName)
+    throw new InvalidTransitionException(action,
+                                         context.state.getClass.getSimpleName
+    )

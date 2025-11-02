@@ -38,7 +38,7 @@ ThisBuild / scalaVersion := scala3
 // Aquí centralizamos las versiones de librerías externas. De esta forma,
 // si queremos actualizar una dependencia, basta con cambiar el valor aquí.
 lazy val V = new {
-  val munit = "1.1.1" // versión de MUnit (framework de testing)
+  val munit = "1.2.1" // versión de MUnit (framework de testing)
   val junit = "5.13.4" // versión estable de JUnit 5
 }
 
@@ -194,6 +194,14 @@ lazy val designPatterns2 = project
       moduleName := "design-patterns-2"
   )
 
+// Subproyecto correspondiente a la clase 17: Patrones de Diseño III - Visitor
+lazy val visitor = project
+  .in(file("17-visitor"))
+  .settings(
+      name := "17-visitor",
+      moduleName := "visitor"
+  )
+
 // -----------------------------------------------------------------------------
 // Proyecto raíz
 // -----------------------------------------------------------------------------
@@ -216,7 +224,8 @@ lazy val root = project
       polymorphism,
       designPatterns1,
       tamagotchiExercise,
-      designPatterns2
+      designPatterns2,
+      visitor
   ) // Agrega los subproyectos
   .settings(
       name := "clases-memes",

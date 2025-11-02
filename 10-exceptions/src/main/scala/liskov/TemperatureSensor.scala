@@ -11,7 +11,8 @@ class HttpTemperatureSensor extends TemperatureSensor:
 def averageTemperature(sensors: List[TemperatureSensor]): Int =
   var sum = 0
   for sensor <- sensors do
-    sum += sensor.readCelsius()
+    sum += sensor
+      .readCelsius()
       // Necesitamos manejar el caso excepcional explícitamente
       .getOrElse(0)
   sum / sensors.length

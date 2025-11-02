@@ -6,7 +6,7 @@ class Client(logger: Logger = NullLogger):
   def bar(): Unit = logger.log("bar")
   def baz(): Unit = logger.log("baz")
 
-@main def client(): Unit =
+@main def nullObjectExample(): Unit =
   println("Null logger:")
   new Client().foo()
   println("Simple logger:")

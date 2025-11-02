@@ -1,7 +1,9 @@
 package cl.uchile.dcc
 package media
 
-abstract class AbstractMedia(override val title: String, override val duration: Int) extends Media:
+abstract class AbstractMedia(override val title: String,
+                             override val duration: Int
+) extends Media:
   var currentPosition: Int = 0
   val description: String // abstract
 

@@ -10,7 +10,7 @@ class Person(val name: String, val age: Int, val skills: mutable.Set[Skill]):
   override def toString: String =
     s"Person($name, $age, ${skills.mkString(", ")})"
 
-  //noinspection TypeCheckCanBeMatch
+  // noinspection TypeCheckCanBeMatch
   override def equals(obj: Any): Boolean =
     if obj.isInstanceOf[Person] then
       val other = obj.asInstanceOf[Person]

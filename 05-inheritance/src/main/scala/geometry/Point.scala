@@ -14,7 +14,8 @@ class Point(val x: Int, val y: Int):
 class ColorPoint(x: Int, y: Int, val color: Color) extends Point(x, y)
 
 @main def testPoint(): Unit =
-  val thisSlide: Screen = (x: Int, y: Int) => println(s"Drawing point at ($x, $y)")
+  val thisSlide: Screen = (x: Int, y: Int) =>
+    println(s"Drawing point at ($x, $y)")
   val p1 = new Point(10, 20)
   p1.display(thisSlide)
   val p2 = new ColorPoint(30, 40, Color.RED)

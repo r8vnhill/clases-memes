@@ -8,13 +8,11 @@ def baz(): Nothing = throw new C
 
 def bar(): Nothing =
   try baz()
-  catch
-    case a: A => ???
+  catch case a: A => ???
 
 def foo(): Nothing =
   try bar()
-  catch
-    case b: B => ???
+  catch case b: B => ???
 
 @main def callStackExample(): Unit =
   foo()

@@ -8,8 +8,7 @@ class Order:
 
   def addItem(item: String): Unit = items += item
 
-
 @main def orderMain(): Unit =
   val order = new Order
   // order.items += "Pizza"   <-- High coupling
-  order.addItem("Pizza")  //  <-- Low coupling
+  order.addItem("Pizza") //  <-- Low coupling
