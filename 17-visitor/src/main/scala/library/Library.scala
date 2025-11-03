@@ -22,5 +22,5 @@ class Library:
     items.filter { item =>
       val evaluator = new EvaluatePredicateVisitor()
       p.accept(evaluator, item)
-      evaluator.getResult
+      evaluator.result
     }
