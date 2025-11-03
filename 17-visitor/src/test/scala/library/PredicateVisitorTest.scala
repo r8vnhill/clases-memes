@@ -2,7 +2,6 @@ package cl.uchile.dcc
 package library
 
 import library.predicate.*
-import library.visitor.PrettyPrintVisitor
 
 import munit.FunSuite
 
