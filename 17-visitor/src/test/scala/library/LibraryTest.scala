@@ -33,14 +33,14 @@ class LibraryTest extends FunSuite:
                  expected
     )
 
-//  test("search by name not found"):
-//    val expected: mutable.Set[Item] = mutable.Set.empty[Item]
-//    assertEquals(library.searchByPredicate(new ByName("Spiderman")), expected)
-//
-//  test("search by name multiple items"):
-//    val expected: mutable.Set[Item] = mutable.Set[Item](book2, game1)
-//    assertEquals(library.searchByPredicate(new ByName("The Witcher")), expected)
-//
+  test("search by name not found"):
+    val expected: mutable.Set[Item] = mutable.Set.empty[Item]
+    assertEquals(library.searchByPredicate(new ByName("Spiderman")), expected)
+
+  test("search by name multiple items"):
+    val expected: mutable.Set[Item] = mutable.Set[Item](book2, game1)
+    assertEquals(library.searchByPredicate(new ByName("The Witcher")), expected)
+
 //  test("search by year"):
 //    val expected: mutable.Set[Item] = mutable.Set[Item](book1, game1)
 //    assertEquals(library.searchByPredicate(new ByYear(2015)), expected)
