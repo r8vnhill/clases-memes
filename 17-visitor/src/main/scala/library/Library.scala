@@ -20,7 +20,5 @@ class Library:
   /** Filtra los elementos utilizando un `Predicate` y un visitor evaluador. */
   def searchByPredicate(p: Predicate): mutable.Set[Item] =
     items.filter { item =>
-      val evaluator = new EvaluatePredicateVisitor()
-      p.accept(evaluator, item)
-      evaluator.result
+      ???
     }
