@@ -220,7 +220,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "B:\\scoop\\persist\\gradle\\.gradle\\jdks\\eclipse_adoptium-22-amd64-windows.2",
+                "home": "B:\\scoop\\apps\\temurin22-jdk\\current",
                 "options": [
                     "-Duser.dir=E:\\Documentos\\Code\\Teaching\\memes\\clases-memes\\project"
                 ]
@@ -229,7 +229,7 @@
                 
             ],
             "runtimeConfig": {
-                "home": "B:\\scoop\\persist\\gradle\\.gradle\\jdks\\eclipse_adoptium-22-amd64-windows.2",
+                "home": "B:\\scoop\\apps\\temurin22-jdk\\current",
                 "options": [
                     "-Duser.dir=E:\\Documentos\\Code\\Teaching\\memes\\clases-memes\\project"
                 ]

@@ -24,15 +24,15 @@ class LibraryTest extends FunSuite:
     val emptyLibrary = new Library
     assert(emptyLibrary.isEmpty)
 
-//  test("non empty Library"):
-//    assert(!library.isEmpty)
-//
-//  test("search by name"):
-//    val expected: mutable.Set[Item] = mutable.Set[Item](book1)
-//    assertEquals(library.searchByPredicate(new ByName("El libro Troll")),
-//                 expected
-//    )
-//
+  test("non empty Library"):
+    assert(!library.isEmpty)
+
+  test("search by name"):
+    val expected: mutable.Set[Item] = mutable.Set[Item](book1)
+    assertEquals(library.searchByPredicate(new ByName("El libro Troll")),
+                 expected
+    )
+
 //  test("search by name not found"):
 //    val expected: mutable.Set[Item] = mutable.Set.empty[Item]
 //    assertEquals(library.searchByPredicate(new ByName("Spiderman")), expected)
