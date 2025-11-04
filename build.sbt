@@ -202,6 +202,14 @@ lazy val visitor = project
       moduleName := "visitor"
   )
 
+// Subproyecto correspondiente a la clase 18: Expression Problem
+lazy val expressionProblem = project
+  .in(file("18-expression-problem"))
+  .settings(
+      name := "18-expression-problem",
+      moduleName := "expression-problem"
+  )
+
 // -----------------------------------------------------------------------------
 // Proyecto raíz
 // -----------------------------------------------------------------------------
@@ -225,7 +233,8 @@ lazy val root = project
       designPatterns1,
       tamagotchiExercise,
       designPatterns2,
-      visitor
+      visitor,
+      expressionProblem
   ) // Agrega los subproyectos
   .settings(
       name := "clases-memes",

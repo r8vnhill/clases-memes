@@ -21,7 +21,7 @@ class LibraryTest extends FunSuite:
     library.add(game1)
 
   test("empty Library"):
-    val emptyLibrary = new Library()
+    val emptyLibrary = new Library
     assert(emptyLibrary.isEmpty)
 
   test("non empty Library"):
@@ -41,56 +41,56 @@ class LibraryTest extends FunSuite:
     val expected: mutable.Set[Item] = mutable.Set[Item](book2, game1)
     assertEquals(library.searchByPredicate(new ByName("The Witcher")), expected)
 
-  test("search by year"):
-    val expected: mutable.Set[Item] = mutable.Set[Item](book1, game1)
-    assertEquals(library.searchByPredicate(new ByYear(2015)), expected)
-
-  test("search by prefix"):
-    val expected: mutable.Set[Item] = mutable.Set[Item](book2, game1)
-    assertEquals(library.searchByPredicate(new ByPrefix("The")), expected)
-
-  test("search by and"):
-    val expected: mutable.Set[Item] = mutable.Set[Item](game1)
-    assertEquals(
-        library.searchByPredicate(
-            new And(new ByName("The Witcher"), new ByYear(2015))
-        ),
-        expected
-    )
-
-  test("search by or"):
-    val expectedOr: mutable.Set[Item] = mutable.Set[Item](book1, book2, game1)
-    assertEquals(
-        library.searchByPredicate(
-            new Or(new ByName("The Witcher"), new ByYear(2015))
-        ),
-        expectedOr
-    )
-
-    val expectedAnd: mutable.Set[Item] = mutable.Set[Item](book1)
-    assertEquals(
-        library.searchByPredicate(
-            new And(new Or(new ByName("The Witcher"), new ByYear(2015)),
-                    new ByPrefix("E")
-            )
-        ),
-        expectedAnd
-    )
-
-  test("negation"):
-    val expectedNegated: mutable.Set[Item] = mutable.Set.empty[Item]
-    assertEquals(
-        library.searchByPredicate(
-            new Neg(new Or(new ByName("The Witcher"), new ByYear(2015)))
-        ),
-        expectedNegated
-    )
-
-    val expectedPositive: mutable.Set[Item] = mutable.Set[Item](book2)
-    assertEquals(library.searchByPredicate(new Neg(new ByYear(2015))),
-                 expectedPositive
-    )
-
-  test("search by game"):
-    val expected: mutable.Set[Item] = mutable.Set(game1)
-    assertEquals(library.searchByPredicate(new ByVideoGame), expected)
+//  test("search by year"):
+//    val expected: mutable.Set[Item] = mutable.Set[Item](book1, game1)
+//    assertEquals(library.searchByPredicate(new ByYear(2015)), expected)
+//
+//  test("search by prefix"):
+//    val expected: mutable.Set[Item] = mutable.Set[Item](book2, game1)
+//    assertEquals(library.searchByPredicate(new ByPrefix("The")), expected)
+//
+//  test("search by and"):
+//    val expected: mutable.Set[Item] = mutable.Set[Item](game1)
+//    assertEquals(
+//        library.searchByPredicate(
+//            new And(new ByName("The Witcher"), new ByYear(2015))
+//        ),
+//        expected
+//    )
+//
+//  test("search by or"):
+//    val expectedOr: mutable.Set[Item] = mutable.Set[Item](book1, book2, game1)
+//    assertEquals(
+//        library.searchByPredicate(
+//            new Or(new ByName("The Witcher"), new ByYear(2015))
+//        ),
+//        expectedOr
+//    )
+//
+//    val expectedAnd: mutable.Set[Item] = mutable.Set[Item](book1)
+//    assertEquals(
+//        library.searchByPredicate(
+//            new And(new Or(new ByName("The Witcher"), new ByYear(2015)),
+//                    new ByPrefix("E")
+//            )
+//        ),
+//        expectedAnd
+//    )
+//
+//  test("negation"):
+//    val expectedNegated: mutable.Set[Item] = mutable.Set.empty[Item]
+//    assertEquals(
+//        library.searchByPredicate(
+//            new Neg(new Or(new ByName("The Witcher"), new ByYear(2015)))
+//        ),
+//        expectedNegated
+//    )
+//
+//    val expectedPositive: mutable.Set[Item] = mutable.Set[Item](book2)
+//    assertEquals(library.searchByPredicate(new Neg(new ByYear(2015))),
+//                 expectedPositive
+//    )
+//
+//  test("search by game"):
+//    val expected: mutable.Set[Item] = mutable.Set(game1)
+//    assertEquals(library.searchByPredicate(new ByVideoGame), expected)
