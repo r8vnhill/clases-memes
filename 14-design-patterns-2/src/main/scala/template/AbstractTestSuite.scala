@@ -10,8 +10,8 @@ abstract class AbstractTestSuite:
     val failedTests = mutable.Set[TestCase]()
     for test <- tests do
       beforeEach()
-      if !test.test() then failedTests += test
-      afterEach()
+      try if !test.test() then failedTests += test
+      finally afterEach()
     report(failedTests)
 
   protected def beforeEach(): Unit

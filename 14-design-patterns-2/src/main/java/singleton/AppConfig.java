@@ -7,24 +7,21 @@ package singleton;
  * initialization with a static field. It is intentionally NOT thread-safe and is
  * meant purely for teaching the Singleton pattern in a single-threaded context.
  */
-public final class DatabaseConnection {
-    private static DatabaseConnection instance = null; // not thread-safe (see class doc)
+public final class AppConfig {
+    private static AppConfig instance = null; // not thread-safe (see class doc)
 
-    public final String driver;
-    public final String url;
+    public final String appName;
+    public final String theme;
 
-    private DatabaseConnection(String driver, String url) {
-        this.driver = driver;
-        this.url = url;
+    private AppConfig(String appName, String theme) {
+        this.appName = appName;
+        this.theme = theme;
     }
 
-    public static DatabaseConnection getInstance() {
+    public static AppConfig getInstance() {
         // Not thread-safe: multiple threads could create multiple instances.
         if (instance == null) {
-            instance = new DatabaseConnection(
-                    "org.postgresql.Driver",
-                    "jdbc:postgresql://localhost:5432/test"
-            );
+            instance = new AppConfig("CC3002", "light");
         }
         return instance;
     }
@@ -32,8 +29,8 @@ public final class DatabaseConnection {
     public static void main(String[] args) {
         //noinspection ObjectEquality,ExpressionComparedToItself
         System.out.println(
-                DatabaseConnection.getInstance() ==
-                        DatabaseConnection.getInstance()
+                AppConfig.getInstance() ==
+                        AppConfig.getInstance()
         );
     }
 }
