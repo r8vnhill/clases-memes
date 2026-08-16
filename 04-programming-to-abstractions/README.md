@@ -1,7 +1,7 @@
 # 04 - Programming to Abstractions
 
-Este módulo reúne ejemplos introductorios sobre cómo construir objetos,
-definir contratos con traits y usar polimorfismo de subtipos en Scala.
+Este módulo reúne ejemplos introductorios sobre cómo construir objetos, definir contratos con traits y usar polimorfismo
+de subtipos en Scala.
 
 ## Temas cubiertos
 
@@ -17,16 +17,11 @@ definir contratos con traits y usar polimorfismo de subtipos en Scala.
 
 ### Constructores e inicialización
 
-- `src/main/scala/domain/people/Musician.scala`
-  Muestra creación de objetos, acceso a campos y mutación de `var`.
-- `src/main/scala/domain/people/Person.scala`
-  Muestra lógica de inicialización en el cuerpo de la clase.
-- `src/main/scala/domain/geometry/ColorPoint.scala`
-  Muestra un caso de inicialización incompleta.
-- `src/main/scala/domain/people/Student.scala`
-  Muestra constructores auxiliares.
-- `src/main/scala/domain/network/Socket.scala`
-  Muestra parámetros por defecto y argumentos con nombre.
+- `src/main/scala/domain/people/Musician.scala` Muestra creación de objetos, acceso a campos y mutación de `var`.
+- `src/main/scala/domain/people/Person.scala` Muestra lógica de inicialización en el cuerpo de la clase.
+- `src/main/scala/domain/geometry/ColorPoint.scala` Muestra un caso de inicialización incompleta.
+- `src/main/scala/domain/people/Student.scala` Muestra constructores auxiliares.
+- `src/main/scala/domain/network/Socket.scala` Muestra parámetros por defecto y argumentos con nombre.
 
 ### Traits como contratos
 
@@ -37,20 +32,17 @@ definir contratos con traits y usar polimorfismo de subtipos en Scala.
 
 ### Polimorfismo y abstracciones
 
-- `src/main/scala/polymorphism/SubtypePolymorphism.scala`
-  Contrasta subtipado explícito en Scala con clases que solo “se parecen”.
+- `src/main/scala/polymorphism/SubtypePolymorphism.scala` Contrasta subtipado explícito en Scala con clases que solo “se
+  parecen”.
 - `src/main/scala/tree/Tree.scala`
 - `src/main/scala/tree/Leaf.scala`
-- `src/main/scala/tree/InternalNode.scala`
-  Muestran una abstracción `Tree` con implementaciones concretas distintas.
+- `src/main/scala/tree/InternalNode.scala` Muestran una abstracción `Tree` con implementaciones concretas distintas.
 
 ### Material complementario en otros lenguajes
 
-- `src/main/c/musician.c`
-  Paralelo en C entre reserva de memoria e inicialización.
-- `src/main/python/polymorphism/subtype_polymorphism.py`
-  Paralelo en Python para mostrar duck typing y el rol limitado de las
-  anotaciones de tipo.
+- `src/main/c/musician.c` Paralelo en C entre reserva de memoria e inicialización.
+- `src/main/python/polymorphism/subtype_polymorphism.py` Paralelo en Python para mostrar duck typing y el rol limitado
+  de las anotaciones de tipo.
 
 ## Cómo compilar y listar ejemplos Scala
 
@@ -86,10 +78,8 @@ También hay otros `@main` útiles como:
 
 El ejemplo `src/main/c/musician.c` no forma parte del build SBT.
 
-- Con compilador manual (`clang` o `gcc`), sigue las instrucciones del propio
-  archivo.
-- Con CMake, el módulo tiene un `CMakeLists.txt` aislado que no interfiere con
-  SBT.
+- Con compilador manual (`clang` o `gcc`), sigue las instrucciones del propio archivo.
+- Con CMake, el módulo tiene un `CMakeLists.txt` aislado que no interfiere con SBT.
 
 Ejemplo de flujo con CMake:
 
@@ -100,8 +90,7 @@ cmake --build 04-programming-to-abstractions/cmake-build
 
 ### Python
 
-El ejemplo `src/main/python/polymorphism/subtype_polymorphism.py` tampoco forma
-parte del build SBT.
+El ejemplo `src/main/python/polymorphism/subtype_polymorphism.py` tampoco forma parte del build SBT.
 
 Se puede ejecutar directamente con:
 
@@ -111,6 +100,5 @@ python 04-programming-to-abstractions/src/main/python/polymorphism/subtype_polym
 
 ## Nota
 
-Este módulo está pensado como material didáctico pequeño y progresivo. Los
-ejemplos priorizan claridad conceptual por sobre generalidad o robustez de
-producción.
+Este módulo está pensado como material didáctico pequeño y progresivo. Los ejemplos priorizan claridad conceptual por
+sobre generalidad o robustez de producción.

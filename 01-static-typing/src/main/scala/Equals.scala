@@ -1,22 +1,31 @@
 package cl.uchile.dcc
 
 /**
- * Compares two integers for equality.
+ * Compara dos enteros e imprime un mensaje cada vez que se ejecuta.
  *
- * This function checks if the two integer values `a` and `b` are equal.
- * Before performing the comparison, it prints "equals called" to the
- * console.
+ * Este ejemplo permite observar la firma de una función en Scala:
+ *
+ * {{{
+ * equals: (Int, Int) => Boolean
+ * }}}
+ *
+ * La función recibe dos valores de tipo `Int` y produce un valor de tipo `Boolean`. En Scala, cuando no se utiliza 
+ * `return`, el valor de la última expresión del cuerpo es el resultado de la función. En este caso, esa expresión es 
+ * `a == b`.
+ *
+ * La llamada a `println` produce además un efecto observable: cada vez que se evalúa `equals`, se imprime
+ * `"equals called"`. Este efecto es independiente del valor `Boolean` que retorna la función.
  *
  * @param a
- *   the first integer to compare
+ *   primer entero que se comparará
  * @param b
- *   the second integer to compare
+ *   segundo entero que se comparará
  * @return
- *   true if `a` and `b` are equal, false otherwise
+ *   `true` si `a` y `b` representan el mismo valor; `false` en caso contrario
  * @example
  *   {{{
- *   equals(3, 3)   // prints "equals called" and returns true
- *   equals(2, 5)   // prints "equals called" and returns false
+ *   equals(3, 3) // imprime "equals called" y retorna true
+ *   equals(2, 5) // imprime "equals called" y retorna false
  *   }}}
  */
 def equals(
