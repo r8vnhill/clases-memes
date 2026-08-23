@@ -439,6 +439,18 @@ Si escribes documentación o comentarios, asegúrate de que:
 - no reemplazar una solución simple y enseñable por una más sofisticada solo por ser más idiomática;
 - no documentar exhaustivamente como si esto fuera una API pública industrial.
 
+### Guardrails específicos de `05-inheritance`
+
+- En este módulo, los `trait` representan contratos; la implementación compartida se enseña con herencia simple de
+  clases.
+- Mantén la jerarquía de listas sin genéricos propios: `SimpleList`, `MutableList`, `ArrayList` y `LinkedList` usan
+  `Any` por razones pedagógicas.
+- Conserva la limitación intencional de `Comparable.compareTo(other: Any)`: prepara la motivación para estudiar
+  genéricos más adelante.
+- No introduzcas `private` ni `protected` en este módulo; la visibilidad y el encapsulamiento se estudiarán después.
+- Las implementaciones ubicadas en `src/main` deben estar completas. Si un archivo es un ejercicio, márcalo
+  explícitamente como tal y no lo presentes como referencia.
+
 ---
 
 ## Referencias internas útiles
